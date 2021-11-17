@@ -15,9 +15,12 @@ class _HomeState extends State<Home> {
   int openedCard = 0;
   bool isExpanded = false;
 
-  void onCardPressed(int index) {
-    openedCard = index;
-    isExpanded = !isExpanded;
+  void onCardPressed(int index) async {
+    if (index == openedCard && isExpanded) {
+      isExpanded = false;
+    } else {
+      isExpanded = true;
+    }
 
     setState(() {});
   }

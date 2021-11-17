@@ -28,10 +28,12 @@ class Header extends StatelessWidget {
       title: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          StyledText(
-            category.name,
-            color: isExpanded ? Colors.white : Colors.black,
-            weight: isExpanded ? FontWeight.bold : FontWeight.normal,
+          Flexible(
+            child: StyledText(
+              category.name,
+              color: isExpanded ? Colors.white : Colors.black,
+              weight: isExpanded ? FontWeight.bold : FontWeight.normal,
+            ),
           ),
           const SizedBox(width: 5),
           Card(
